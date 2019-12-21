@@ -13,9 +13,34 @@ namespace Zadatak_PPP_5
             ImeTrenera = imeTrenera;
         }
 
+        public Ekipa(string naziv, string imeTrenera)
+        {
+            Naziv = naziv;
+            Igraci = new List<Fudaler>();
+            ImeTrenera = imeTrenera;
+        }
+
         public string Naziv { get; set; }
         IList<Fudaler> Igraci { get; set; }
         public string ImeTrenera { get; set; }
+
+        public  Fudaler this [ int index]
+        {
+            get
+            {
+                return Igraci[index];
+            }
+
+            set
+            {
+                Igraci.Add(value);
+            }
+        }
+
+        //public void dodajFudbalera(Fudaler f)
+        //{
+        //    Igraci.Add(f);
+        //}
 
         public Fudaler vratiNajstarijeg()
         {
