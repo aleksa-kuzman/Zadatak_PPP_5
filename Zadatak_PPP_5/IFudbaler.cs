@@ -9,6 +9,5 @@ namespace Zadatak_PPP_5
         public void DajGol();
         public float RacunajProsekGolova(int brojUtakamica);
 
-
     }
 }
